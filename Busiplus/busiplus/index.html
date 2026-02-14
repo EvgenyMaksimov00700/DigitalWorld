@@ -26,14 +26,16 @@
         <li><a href="#services">Услуги</a></li>
         <li><a href="#portfolio">Проекты</a></li>
         <li><a href="#cta">Связаться</a></li>
+        <li class="nav-cta-wrap"><a href="#cta" class="nav-cta nav-cta--mobile">Оставить заявку</a></li>
       </ul>
-      <a href="#cta" class="nav-cta">Оставить заявку</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Меню">
+      <a href="#cta" class="nav-cta nav-cta--desktop">Оставить заявку</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Меню" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
       </button>
     </div>
+    <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
   </nav>
 
   <!-- Hero -->
@@ -186,20 +188,35 @@
       var nav = document.getElementById('nav');
       var navLinks = document.getElementById('navLinks');
       var navToggle = document.getElementById('navToggle');
+      var navOverlay = document.getElementById('navOverlay');
 
       function onScroll() {
         nav.classList.toggle('scrolled', window.scrollY > 50);
       }
 
+      function openMenu() {
+        navLinks.classList.add('open');
+        if (navOverlay) navOverlay.classList.add('active');
+        if (navToggle) navToggle.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeMenu() {
+        navLinks.classList.remove('open');
+        if (navOverlay) navOverlay.classList.remove('active');
+        if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+
       function toggleMenu() {
-        navLinks.classList.toggle('open');
+        if (navLinks.classList.contains('open')) closeMenu();
+        else openMenu();
       }
 
       navToggle.addEventListener('click', toggleMenu);
+      if (navOverlay) navOverlay.addEventListener('click', closeMenu);
       document.querySelectorAll('.nav-links a').forEach(function (a) {
-        a.addEventListener('click', function () {
-          navLinks.classList.remove('open');
-        });
+        a.addEventListener('click', closeMenu);
       });
 
       window.addEventListener('scroll', onScroll, { passive: true });
