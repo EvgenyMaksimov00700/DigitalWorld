@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Резюме — Максимов Евгений Леонидович</title>
+  <style>
+    :root {
+      --text: #1f2937;
+      --muted: #4b5563;
+      --accent: #0f766e;
+      --border: #d1d5db;
+      --bg: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      background: #f3f4f6;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: #f3f4f6;
+      line-height: 1.5;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 16px auto;
+      padding: 18mm 16mm;
+      background: var(--bg);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 16px;
+    }
+
+    .header-main {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .header-photo {
+      width: 120px;
+      flex-shrink: 0;
+    }
+
+    .header-photo img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 28px;
+      line-height: 1.15;
+    }
+
+    h2 {
+      margin: 24px 0 10px;
+      padding-bottom: 4px;
+      font-size: 18px;
+      color: var(--accent);
+      border-bottom: 1px solid var(--border);
+    }
+
+    h3 {
+      margin: 18px 0 4px;
+      font-size: 16px;
+      line-height: 1.3;
+    }
+
+    p {
+      margin: 0 0 10px;
+    }
+
+    ul {
+      margin: 8px 0 12px 18px;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 4px;
+    }
+
+    .top-meta {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .top-meta p {
+      margin: 2px 0;
+    }
+
+    @media (max-width: 700px) {
+      .header {
+        flex-direction: column-reverse;
+      }
+
+      .header-photo {
+        width: 110px;
+      }
+    }
+
+    .role-line {
+      margin: 0 0 10px;
+      font-weight: 700;
+      color: var(--muted);
+    }
+
+    .result {
+      margin-top: 8px;
+    }
+
+    .links a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .skills p {
+      margin-bottom: 8px;
+    }
+
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 18px 0;
+    }
+
+    @page {
+      size: A4;
+      margin: 12mm;
+    }
+
+    @media print {
+      html,
+      body {
+        background: #fff;
+      }
+
+      .page {
+        width: auto;
+        min-height: auto;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="header">
+      <div class="header-main">
+        <h1>Максимов Евгений Леонидович</h1>
+        <div class="top-meta">
+          <p>Казань</p>
+          <p>Тел.: +7 987 208-6036 | Telegram: @Maksi00700</p>
+          <p>E-mail: maksiel1983@icloud.com</p>
+          <p>Зарплата: от 150 000 ₽</p>
+        </div>
+      </div>
+      <div class="header-photo">
+        <img src="file:///C:/Users/%D0%9B%D0%B5%D0%BE%D0%BD%D0%B8%D0%B4/.cursor/projects/c-Users-Desktop/assets/c__Users________AppData_Roaming_Cursor_User_workspaceStorage_57433937f8f92a3e59c55618d578a370_images_preview_image-4e0b6ca1-ae08-4735-88e1-cda09ce7d62e.png" alt="Фото Максимова Евгения Леонидовича">
+      </div>
+    </section>
+
+    <h2>О себе</h2>
+    <p>18 лет опыта в управлении продуктами и бизнес-процессами: юриспруденция и экономическая безопасность, включая 9 лет в банковской сфере. С 2021 года развиваюсь в IT и веду продукты от идеи до запуска и роста: прорабатываю фичи, логику приложения, интеграции, упаковку, монетизацию и продвижение. Совмещаю продуктовую экспертизу, разработку и маркетинг, умею доводить проект до рабочего результата в условиях ограниченных ресурсов.</p>
+
+    <h2>Опыт работы в IT</h2>
+
+    <h3>tWorker — Telegram Mini App для поиска работы и массового найма</h3>
+    <p class="role-line">Со-основатель / Product Developer / Growth | июль 2024 — н.в.</p>
+    <ul>
+      <li>Проработка логики приложения и сценариев взаимодействия пользователей.</li>
+      <li>Разработка Mini App для Telegram, подготовка версии на платформе MAX.</li>
+      <li>Интеграция с API SuperJob.</li>
+      <li>Разработка логики рассылки вакансий через бота.</li>
+      <li>Запуск и развитие сайта-лендинга под продукт.</li>
+      <li>Формирование упаковки продукта, тарифов и модели монетизации.</li>
+      <li>Продвижение через Telegram Ads, direct outreach, холодные звонки и рекомендации пользователей.</li>
+      <li>Развитие каналов привлечения и тестирование гипотез роста.</li>
+    </ul>
+    <p class="result"><strong>Результат:</strong> 1 000 000+ вакансий, 2 200+ компаний, прямой чат между работодателем и соискателем, мгновенные отклики внутри Telegram.</p>
+    <p class="links"><strong>Ссылка на продукт:</strong> <a href="https://t.me/tworker_ru_bot">t.me/tworker_ru_bot</a></p>
+
+    <h3>B2B Crypto — B2B-платформа оплаты криптовалютой</h3>
+    <p class="role-line">Со-основатель / Product | февраль 2023 — июль 2024</p>
+    <ul>
+      <li>Разработка MVP и продуктовой логики.</li>
+      <li>Построение и доработка рабочих процессов на основе итераций.</li>
+      <li>Совместно с партнерами выстроена схема, при которой криптоплатежи проходили комплаенс у банков.</li>
+      <li>Построена система покупки криптовалюты в Казахстане и Киргизии с последующей оплатой зарубежных инвойсов.</li>
+      <li>Работа с партнерами и интеграциями для безопасных B2B-транзакций.</li>
+    </ul>
+
+    <h3>Digital World — студия разработки</h3>
+    <p class="role-line">Со-основатель / Product | н.в.</p>
+    <ul>
+      <li>Создание сайтов, приложений и AI-решений под ключ.</li>
+      <li>Участие в разработке, верстке и упаковке услуг.</li>
+      <li>Развитие клиентских digital-проектов и продуктовых направлений.</li>
+    </ul>
+    <p><strong>Текущие проекты:</strong></p>
+    <ul>
+      <li><strong>Рестайл Про</strong> — сайт и настройка продаж, доля в сервисе по рестайлингу авто премиум-класса.</li>
+      <li>Проект в сфере ремонта и строительства — digital-продажи и автоматизация процессов.</li>
+    </ul>
+
+    <h2>Опыт работы до IT</h2>
+
+    <h3>ООО «Хоум Кредит энд Финанс Банк»</h3>
+    <p class="role-line">Старший специалист | 2013 — 2021</p>
+    <ul>
+      <li>Экономическая безопасность.</li>
+      <li>Проверка сотрудников и контрагентов.</li>
+      <li>Выявление мошеннических схем и рисков.</li>
+    </ul>
+
+    <h3>УФСКН России по РТ</h3>
+    <p class="role-line">Заместитель начальника отдела | 2004 — 2012</p>
+    <ul>
+      <li>Выявление организованных групп, причастных к незаконному обороту наркотиков.</li>
+      <li>Организация и проведение профильных мероприятий.</li>
+    </ul>
+
+    <h2>Образование и курсы</h2>
+    <p><strong>Казанский юридический институт МВД РФ</strong><br>Юриспруденция, 2004</p>
+    <p><strong>Avenue School</strong><br>Java, ООП, PostgreSQL, веб-разработка</p>
+    <p><strong>Школа программирования Биналия</strong><br>Основы программирования, ООП</p>
+    <p><strong>Менторство по программированию</strong><br>По настоящее время</p>
+
+    <h2>Навыки</h2>
+    <div class="skills">
+      <p><strong>Продукт:</strong> логика продукта, фичи, сценарии, упаковка, монетизация, MVP, итерации.</p>
+      <p><strong>Разработка:</strong> Java, Spring, PostgreSQL, HTML/CSS, JavaScript, Git, IntelliJ IDEA, Telegram Bot API, Mini App.</p>
+      <p><strong>Продвижение и рост:</strong> Telegram Ads, direct outreach, холодные звонки, рекомендации пользователей, каналы привлечения.</p>
+    </div>
+
+    <h2>Портфолио</h2>
+    <ul class="links">
+      <li><strong>GitHub:</strong> <a href="https://github.com/EvgenyMaksimov00700">github.com/EvgenyMaksimov00700</a></li>
+      <li><strong>tWorker:</strong> <a href="https://t.me/tworker_ru_bot">t.me/tworker_ru_bot</a></li>
+    </ul>
+
+    <h2>Дополнительно</h2>
+    <ul>
+      <li>Русский — родной</li>
+      <li>Английский — B1</li>
+      <li>Водительские права категории B</li>
+      <li>Рекомендации: Венедиктов Р. В. (Университет Иннополис), +7 (939) 395-41-95</li>
+    </ul>
+  </main>
+</body>
+</html>
